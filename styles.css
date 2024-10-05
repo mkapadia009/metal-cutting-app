@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 2em;
+}
+
+p {
+    color: #666;
+}
+
+/* Responsive Design for Form Wrapper */
+.sheet-form-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack vertically on small screens */
+    gap: 20px; /* Space between forms */
+}
+
+.form-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="number"],
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Summary Styles */
+.summary {
+    margin: 20px 0;
+}
+
+#order-summary {
+    list-style-type: none;
+    padding: 0;
+}
+
+#order-summary li {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 5px 0;
+    border-left: 4px solid #007bff;
+}
+
+/* Visualization Section */
+.visualization {
+    text-align: center;
+}
+
+canvas {
+    border: 2px solid #333;
+    margin-top: 20px;
+    width: 100%; /* Make canvas responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Button Container */
+.button-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+button {
+    margin: 10px;
+}
+
+#remaining-area {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+    .sheet-form-wrapper {
+        flex-direction: row; /* Change back to row layout on larger screens */
+        justify-content: space-between;
+    }
+
+    .form-card {
+        width: 45%; /* Set width for form cards */
+    }
+
+    canvas {
+        max-width: 800px; /* Max width for canvas */
+        height: 400px; /* Set a fixed height for larger screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Smaller heading for mobile */
+    }
+
+    .form-card h2 {
+        font-size: 1.2em; /* Smaller card title */
+    }
+
+    button {
+        padding: 8px 15px; /* Adjust button padding */
+        font-size: 14px; /* Smaller button text */
+    }
+
+    #remaining-area {
+        font-size: 14px; /* Smaller remaining area text */
+    }
+}

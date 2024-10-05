@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Metal Sheet Cutting Application</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Metal Sheet Cutting Application</h1>
+            <p>Optimize your metal sheet cutting process</p>
+        </header>
+        <div class="sheet-form-wrapper">
+            <div class="form-card">
+                <h2>Main Sheet Dimensions</h2>
+                <label for="main-length">Length (mm):</label>
+                <input type="number" id="main-length" required>
+                <label for="main-width">Width (mm):</label>
+                <input type="number" id="main-width" required>
+                <label for="main-thickness">Thickness (mm):</label>
+                <input type="number" id="main-thickness" required>
+            </div>
+            <div class="form-card">
+                <h2>Client Order Details</h2>
+                <label for="client-name">Client Name:</label>
+                <input type="text" id="client-name" required>
+                <label for="order-length">Order Length (mm):</label>
+                <input type="number" id="order-length" required>
+                <label for="order-width">Order Width (mm):</label>
+                <input type="number" id="order-width" required>
+                <button onclick="addOrder()">Add Order</button>
+            </div>
+        </div>
+        <div class="summary">
+            <h2>Order Summary</h2>
+            <ul id="order-summary"></ul>
+            <button onclick="exportToExcel()">Export to Excel</button>
+            <div id="remaining-area"></div>
+        </div>
+        <div class="visualization">
+            <h2>Visualization</h2>
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
